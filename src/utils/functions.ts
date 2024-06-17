@@ -1,4 +1,4 @@
-export function debounce(func: () => void, wait: number) {
+export function debounce(func: (...args: any[]) => void, wait: number) {
   let timeout: any;
   return function executedFunction(...args: any[]) {
     const later = () => {
@@ -9,3 +9,4 @@ export function debounce(func: () => void, wait: number) {
     timeout = setTimeout(later, wait);
   };
 }
+
