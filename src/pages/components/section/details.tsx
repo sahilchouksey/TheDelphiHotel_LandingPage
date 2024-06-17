@@ -31,7 +31,7 @@ export default function DetailSection() {
         customTo="calc(100% + 5rem)"
       />
 
-      <div className="w-[20%] flex justify-center items-center flex-col relative">
+      <div className="w-[20%] flex justify-center items-center flex-col relativexl:w-[15%]">
         <Text
           tag="h2"
           font="RankingsCaps"
@@ -51,8 +51,9 @@ export default function DetailSection() {
       <DynamicComponentLayout
         currentSlideId={currentSlideId}
         setSlideId={setSlideId}
-        className="max-w-content h-[100%] relative"
+        className="max-w-content h-[100%] relative w-[80%] xl:w-[85%] xl:ml-[-5rem]"
         slides={detailsData.map((data) => data.image)}
+        paginationContainerClassName="right-[-4rem] bottom-[-4rem]"
       >
         <div className="ml-[-8rem]">
           <Text

@@ -106,7 +106,7 @@ const SignUpForm = () => {
 
           <Button
             type="secondary"
-            className="ml-auto mr-[12rem] flex justify-center items-center text-[#fff] before:filter before:invert after:filter after:invert"
+            className="ml-auto mr-[12rem] xl:mr-0 flex justify-center items-center text-[#fff] before:filter before:invert after:filter after:invert"
             animation="custom"
           >
             <Text
@@ -189,7 +189,7 @@ export default function Footer() {
               className="group py-[2rem] px-[8rem] rounded-none text-[#fff] hover:!text-primary"
               animation="custom"
               animationClassName="left-to-right light rounded-none"
-              containerClassName="border border-l-[#fff] flex-1 flex justify-center items-center rounded-none"
+              containerClassName="h-full border border-l-[#fff] flex-1 flex justify-center items-center rounded-none"
               key={index}
             >
               <Text

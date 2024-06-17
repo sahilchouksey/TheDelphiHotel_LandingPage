@@ -34,7 +34,9 @@
   --color-border: #838383;
   --color-border-light: #707070;
 
-  --max-stretch: 143rem;
+  --max-width: calc(100vw - 2rem);
+
+  --max-stretch: min(var(--max-width), 143rem);
 }
 
 *,
@@ -84,14 +86,15 @@ body {
   grid-column: center-start / center-end;
 }
 
-.custom-swiper {
-  width: 143rem;
+img {
+  object-fit: cover !important;
 }
 
-.swpier-wrapper {
-  position: relative;
-  width: 143rem;
-  height: 100%;
+.custom-swiper {
+  width: 100%; /* Makes the Swiper take the full width of its container */
+  max-width: 143rem; /* Optional: Maximum width to prevent it from getting too large on very wide screens */
+  margin: 0 auto; /* Center the Swiper */
+  width: calc(100vw - 2rem);
 }
 
 .image-container {
@@ -370,5 +373,21 @@ span.letter2::before {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    font-size: 50%; /* 1rem = 8px */
+  }
+  .dining-section-container figure span {
+    font-size: 20.6rem;
+  }
+  .dining-section-container figcaption div {
+    top: calc(10% + 8rem) !important;
+  }
+  .dining-section-container figcaption::before {
+    font-size: 20.6rem;
+    top: calc(10% + 8rem);
   }
 }

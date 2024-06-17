@@ -25,11 +25,11 @@ export default function IntroSection() {
         alt="Shiny building"
         src="/assets/images/intro.webp"
         containerClassName=" !w-[50%]"
-        className="intro-img px-[2.5rem] py-[1rem]"
+        className="intro-img px-[2.5rem] py-[1rem] relative z-[49]"
         animated="left-to-right"
       />
       <div className="absolute w-[0.5px] top-0 left-[50%] h-custom transform translate-x-[-50%] bg-border_light translate-y-[-5rem]"></div>
-      <div className="flex flex-col px-[10rem] !w-[50%]">
+      <div className="relative z-[50] flex flex-col px-[10rem] xl:px-[6rem] lg:!px-[1rem] !w-[50%] mb-[3rem]">
         <Text
           tag="h1"
           font="RankingsCaps"

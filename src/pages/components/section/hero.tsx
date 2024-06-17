@@ -16,7 +16,7 @@ export default function HeroSection() {
         x: ["0%", "0%", "100%"],
         transition: {
           times: [0, 0.3, 1],
-          duration: 4,
+          duration: 3,
           ease: "easeInOut",
         },
       });

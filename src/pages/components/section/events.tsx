@@ -16,7 +16,7 @@ export default function EventsSection() {
         x: ["0%", "0%", "100%"],
         transition: {
           times: [0, 0.3, 1],
-          duration: 4,
+          duration: 2,
           ease: "easeInOut",
         },
       });

@@ -15,6 +15,15 @@ export default {
       },
     },
     extend: {
+      screens: {
+        "2xl": { max: "1436px" },
+        xl: { max: "1200px" },
+        lg: { max: "1024px" },
+        md: { max: "768px" },
+        sm: { max: "640px" },
+        xs: { max: "480px" },
+      },
+
       colors: {
         background: "var(--color-bg)",
         primary: "var(--color-primary)",

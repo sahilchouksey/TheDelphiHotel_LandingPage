@@ -15,7 +15,7 @@ export default function AvailablilitySection() {
       />
       <Button
         type="primary"
-        className="text-primary px-[5rem] py-[2.2rem] flex justify-center items-center"
+        className="text-primary px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-center items-center"
         containerClassName="flex-1 h-full flex justify-center items-center"
         animation="none"
         backgroundColor="transparent"
@@ -30,7 +30,7 @@ export default function AvailablilitySection() {
       </Button>
       <Button
         type="primary"
-        className="text-primary px-[5rem] py-[2.2rem] flex justify-center items-center"
+        className="text-primary px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-center items-center"
         containerClassName="flex-1 h-full flex justify-center items-center border-l-[1px] border-border_light"
         animation="none"
         backgroundColor="transparent"
@@ -46,7 +46,7 @@ export default function AvailablilitySection() {
 
       <Button
         type="primary"
-        className="text-primary px-[5rem] py-[2.2rem] flex justify-between items-center"
+        className="text-primary px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-between items-center"
         containerClassName="flex-1 h-full flex justify-center items-center border-l-[1px] border-border_light max-w-[20rem]"
         animation="none"
         backgroundColor="transparent"
@@ -69,7 +69,7 @@ export default function AvailablilitySection() {
 
       <Button
         type="primary"
-        className="text-primary px-[5rem] py-[2.2rem] flex justify-between items-center"
+        className="text-primary px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-between items-center"
         containerClassName="flex-1 h-full flex justify-center items-center border-l-[1px] border-border_light max-w-[20rem]"
         animation="none"
         backgroundColor="transparent"
@@ -92,7 +92,7 @@ export default function AvailablilitySection() {
 
       <Button
         type="primary"
-        className="text-[#fff] px-[5rem] py-[2.2rem] flex justify-center items-center bg-primary w-full h-full rounded-md scale-y-[1.05] "
+        className="text-[#fff] px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-center items-center bg-primary w-full h-full rounded-md scale-y-[1.05] "
         containerClassName="h-full flex justify-center items-center border-l-[1px] border-border_light w-custom-min"
         animation="left-to-right"
       >

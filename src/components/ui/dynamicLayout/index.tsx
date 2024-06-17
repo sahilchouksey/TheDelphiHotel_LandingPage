@@ -18,6 +18,7 @@ interface DynamicComponentLayoutProps {
   children?: React.ReactNode;
   customSlides?: React.ReactNode[];
   currentSlide?: React.ReactNode;
+  paginationContainerClassName?: string;
 }
 
 const DynamicComponentLayout = ({
@@ -28,6 +29,7 @@ const DynamicComponentLayout = ({
   children,
   customSlides,
   currentSlide,
+  paginationContainerClassName,
 }: DynamicComponentLayoutProps) => {
   const swiperRef = useRef<any>(null);
 
@@ -98,7 +100,9 @@ const DynamicComponentLayout = ({
         </Text>
       </div>
 
-      <div className="absolute flex bottom-0 right-0">
+      <div
+        className={`absolute flex bottom-0 right-0 ${paginationContainerClassName}`}
+      >
         <Button
           type="primary"
           animation="custom"

@@ -46,14 +46,14 @@ export default function IndexPage() {
         <ReviewsSection />
       </Section>
       <Section
-        className="bg-no-repeat bg-center bg-contain max-w-full max-w-[192rem] mx-auto !mt-[-36rem] -mb-[60rem] min-h-[178rem] flex justify-center items-center"
+        className="bg-no-repeat bg-center bg-contain max-w-full max-w-[192rem] mx-auto !mt-[-45rem] xl:!mt-[-65rem] -mb-[60rem] min-h-[178rem] flex justify-center items-center"
         style={{ backgroundPosition: "calc(100% - 15rem) center" }}
         backgroundImage="https://symphony.cdn.tambourine.com/the-delphi-downtown-la-full/media/delphi-homepage-map-64be9613eb4a4.jpg"
         childContainerClassName="location flex justify-end items-center"
       >
         <LocationSection />
       </Section>
-      <Section childContainerClassName="mt-[-50rem]">
+      <Section className="max-w-[var(--max-stretch)] mt-[-50rem] xl:mt-[-60rem] overflow-hidden">
         <GallarySection />
       </Section>
       <Footer />

@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import Button from "@/components/ui/button";
 import Image from "@/components/ui/image";
 import Text from "@/typography";
+import LineAnimation from "@/components/ui/animations/line";
 
 export default function DiningSection() {
   const controls = useAnimation();
@@ -21,6 +22,15 @@ export default function DiningSection() {
 
   return (
     <div className="dining-section-container relative pb-[7rem]" ref={ref}>
+      <LineAnimation
+        className="!w-[0.5px] absolute top-0 left-0"
+        direction="vertical"
+      />
+      <LineAnimation
+        className="!w-[0.5px] absolute top-0 right-0"
+        direction="vertical"
+      />
+
       <figure className="text-center relative z-[1] m-0">
         <Image
           src="https://symphony.cdn.tambourine.com/the-delphi-downtown-la-full/media/thedelphidowntownla-homepage-dining-image-03-650e00b0beeed.png"
@@ -34,17 +44,59 @@ export default function DiningSection() {
             className="absolute left-[50%] translate-x-[-50%] w-full flex justify-center"
             style={{ top: "calc(10% + 2rem)" }}
           >
-            <span className="">d</span>
-            <span className="letter1 ">i</span>
-            <span className="">n</span>
-            <span className="">i</span>
-            <span className="letter2 ">n</span>
-            <span className="">g</span>
+            <motion.span
+              initial={{ y: 50, opacity: 0 }}
+              animate={controls}
+              transition={{ duration: 1.5 }}
+              className=""
+            >
+              d
+            </motion.span>
+            <motion.span
+              initial={{ y: 50, opacity: 0 }}
+              animate={controls}
+              transition={{ duration: 1.5 }}
+              className="letter1 "
+            >
+              i
+            </motion.span>
+            <motion.span
+              initial={{ y: 50, opacity: 0 }}
+              animate={controls}
+              transition={{ duration: 1.5 }}
+              className=""
+            >
+              n
+            </motion.span>
+            <motion.span
+              initial={{ y: 50, opacity: 0 }}
+              animate={controls}
+              transition={{ duration: 1.5 }}
+              className=""
+            >
+              i
+            </motion.span>
+            <motion.span
+              initial={{ y: 50, opacity: 0 }}
+              animate={controls}
+              transition={{ duration: 1.5 }}
+              className="letter2 "
+            >
+              n
+            </motion.span>
+            <motion.span
+              initial={{ y: 50, opacity: 0 }}
+              animate={controls}
+              transition={{ duration: 1.5 }}
+              className=""
+            >
+              g
+            </motion.span>
           </div>
         </figcaption>
       </figure>
       <motion.div
-        className="mt-[-6.8rem] relative pl-[13rem] max-w-[44rem] z-[1]"
+        className="mt-[-6.8rem] relative pl-[13rem] xl:pl-[3rem] xl:mt-[3rem] max-w-[44rem] z-[1] xl:max-w-[34rem]"
         initial={{ y: 50, opacity: 0 }}
         animate={controls}
         transition={{ duration: 1.5 }}
