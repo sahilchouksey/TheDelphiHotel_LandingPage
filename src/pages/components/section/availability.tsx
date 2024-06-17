@@ -58,7 +58,7 @@ export default function AvailablilitySection() {
         >
           Rooms
         </Text>
-        <select className="custom-select ml-[4rem] max-w-[6rem] w-[5rem]">
+        <select className="custom-select ml-[4rem] max-w-[6rem] !w-[5rem]">
           <option value="1">01</option>
           <option value="2">02</option>
           <option value="3">03</option>
@@ -81,7 +81,7 @@ export default function AvailablilitySection() {
         >
           Guests
         </Text>
-        <select className="custom-select ml-[4rem] max-w-[6rem] w-[5rem]">
+        <select className="custom-select ml-[4rem] max-w-[6rem] !w-[5rem]">
           <option value="1">01</option>
           <option value="2">02</option>
           <option value="3">03</option>
