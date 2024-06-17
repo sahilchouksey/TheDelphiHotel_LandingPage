@@ -367,6 +367,23 @@ span.letter2::before {
   height: 26.6rem;
 }
 
+.hamburger::before,
+.hamburger::after {
+  content: " ";
+  width: 2rem;
+  height: 1px;
+  background: #1d1d1d;
+  display: block;
+  position: absolute;
+  left: -3rem;
+}
+.hamburger::before {
+  top: 0.4rem;
+}
+.hamburger::after {
+  bottom: 0.9rem;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

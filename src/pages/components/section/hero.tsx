@@ -12,7 +12,7 @@ export default function HeroSection() {
   useEffect(() => {
     if (isInView) {
       controls.start({
-        y: ["-100%", "0%", "0%"],
+        y: ["-50%", "0%", "0%"],
         x: ["0%", "0%", "100%"],
         transition: {
           times: [0, 0.3, 1],

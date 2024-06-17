@@ -19,6 +19,9 @@ interface DynamicComponentLayoutProps {
   customSlides?: React.ReactNode[];
   currentSlide?: React.ReactNode;
   paginationContainerClassName?: string;
+  childContainerClassName?: string;
+  hideCounter?: boolean;
+  customStretch?: number;
 }
 
 const DynamicComponentLayout = ({
@@ -30,6 +33,9 @@ const DynamicComponentLayout = ({
   customSlides,
   currentSlide,
   paginationContainerClassName,
+  childContainerClassName,
+  hideCounter,
+  customStretch,
 }: DynamicComponentLayoutProps) => {
   const swiperRef = useRef<any>(null);
 
@@ -48,6 +54,12 @@ const DynamicComponentLayout = ({
       swiperRef.current.swiper.slidePrev();
     }
   };
+  const maxWidth =
+    customStretch && customStretch > -1
+      ? customStretch
+      : customSlides
+      ? 0.6
+      : 0.4;
 
   return (
     <div
@@ -55,16 +67,20 @@ const DynamicComponentLayout = ({
         !customSlides && "relative"
       }`}
     >
-      <div className="flex justify-between items-center ">
+      <div
+        className={`flex justify-between items-center ${childContainerClassName}`}
+      >
         <Swiper
           effect="fade"
           onSlideChange={handleSlideChange}
           className={`${
-            customSlides ? "" : "w-[60%] detail-section-center relative"
+            customSlides
+              ? ""
+              : "w-[60%] detail-section-center relative mdlg:w-full !max-w-[56rem]"
           }`}
-          modules={[EffectFade, Autoplay]}
+          modules={[EffectFade]}
           style={{
-            maxWidth: `calc(var(--max-stretch) * ${customSlides ? 0.6 : 0.4})`,
+            maxWidth: `calc(var(--max-stretch) * ${maxWidth})`,
           }}
           autoplay={{
             delay: 3000,
@@ -88,17 +104,19 @@ const DynamicComponentLayout = ({
             </SwiperSlide>
           ))}
         </Swiper>
-        {!customSlides && <div className="w-[25%]">{children}</div>}
+        {!customSlides && <div className="w-[25%] mdlg:w-full">{children}</div>}
       </div>
-      <div className="absolute flex top-[15px] right-[15px]">
-        <Text
-          tag="h2"
-          font="RankingsCaps"
-          className="text-[2.9rem] leading-[3.3rem] text-[#2f2625]"
-        >
-          0{currentSlideId + 1}
-        </Text>
-      </div>
+      {!hideCounter && (
+        <div className="absolute flex top-[15px] right-[15px] mdlg:hidden">
+          <Text
+            tag="h2"
+            font="RankingsCaps"
+            className="text-[2.9rem] leading-[3.3rem] text-[#2f2625]"
+          >
+            0{currentSlideId + 1}
+          </Text>
+        </div>
+      )}
 
       <div
         className={`absolute flex bottom-0 right-0 ${paginationContainerClassName}`}

@@ -45,7 +45,7 @@ export default function RoomsSection() {
             Peace &amp; Quiet
           </Text>
         </div>
-        <div className="w-custom-room-min-2 p-[7rem] pr-[2rem] border border-l-border_light">
+        <div className="w-custom-room-min-2 p-[7rem] pr-[2rem] mdlg:p-[5rem] border border-l-border_light">
           <Text
             tag="p"
             font="PrioriSans"

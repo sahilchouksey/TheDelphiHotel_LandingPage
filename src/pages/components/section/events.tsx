@@ -12,7 +12,7 @@ export default function EventsSection() {
   useEffect(() => {
     if (isInView) {
       controls.start({
-        y: ["-100%", "0%", "0%"],
+        y: ["-50%", "0%", "0%"],
         x: ["0%", "0%", "100%"],
         transition: {
           times: [0, 0.3, 1],
@@ -23,7 +23,7 @@ export default function EventsSection() {
     }
   }, [isInView, controls]);
   return (
-    <div ref={ref} className="event-section-container">
+    <div ref={ref} className="event-section-container mdlg:!flex-col">
       <figure className="relative w-custom-event-min overflow-hidden">
         <Image
           alt="a woman talking on a cell phone"
@@ -44,11 +44,11 @@ export default function EventsSection() {
           />
         </motion.div>
       </figure>
-      <div className="w-custom-event-min-2 h-full pr-[2rem] pl-[9%] z-[99] bg-[#254844]">
+      <div className="w-custom-event-min-2 h-full pr-[2rem] pl-[9%] z-[99] bg-[#254844] mdlg:relative mdlg:w-[95%] mdlg:my-[6rem] mdlg:mx-auto mdlg:py-0 mdlg:px-[3rem]">
         <Text
           tag="p"
           font="RankingsCaps"
-          className="text-events text-[#FBF8F2] block absolute top-[-3.8rem] right-[-1.3rem]"
+          className="text-events text-[#FBF8F2] block absolute top-[-3.8rem] right-[-1.3rem] mdlg:!relative mdlg:!top-0 mdlg:!right-0"
         >
           Events
         </Text>

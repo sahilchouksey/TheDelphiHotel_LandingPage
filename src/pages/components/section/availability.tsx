@@ -46,15 +46,16 @@ export default function AvailablilitySection() {
 
       <Button
         type="primary"
-        className="text-primary px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-between items-center"
-        containerClassName="flex-1 h-full flex justify-center items-center border-l-[1px] border-border_light max-w-[20rem]"
+        className="text-primary px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-between items-center mdlg:flex-col mdlg:justify-center"
+        containerClassName="flex-1 h-full flex justify-center items-center  border-l-[1px] border-border_light max-w-[20rem]"
         animation="none"
         backgroundColor="transparent"
       >
         <Text
           tag="span"
           font="RankingsCaps"
-          className="text-[1.3rem] leading-[1.5rem] uppercase relative left-[-1.8rem]"
+          className="text-[1.3rem] leading-[1.5rem] uppercase relative left-[-1.8rem] mdlg:left-[-1rem]"
+          containerClassName="flex"
         >
           Rooms
         </Text>
@@ -69,7 +70,7 @@ export default function AvailablilitySection() {
 
       <Button
         type="primary"
-        className="text-primary px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-between items-center"
+        className="text-primary px-[5rem] py-[2.2rem] xl:px-[3.6rem] xl:py-[1.6rem] lg:!px-[2px] lg:!py-[2rem] flex justify-between items-center mdlg:flex-col mdlg:justify-center"
         containerClassName="flex-1 h-full flex justify-center items-center border-l-[1px] border-border_light max-w-[20rem]"
         animation="none"
         backgroundColor="transparent"
@@ -77,7 +78,8 @@ export default function AvailablilitySection() {
         <Text
           tag="span"
           font="RankingsCaps"
-          className="text-[1.3rem] leading-[1.5rem] uppercase relative left-[-1.8rem]"
+          className="text-[1.3rem] leading-[1.5rem] uppercase relative left-[-1.8rem] mdlg:left-[-1rem]"
+          containerClassName="flex"
         >
           Guests
         </Text>

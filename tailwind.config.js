@@ -19,6 +19,7 @@ export default {
         "2xl": { max: "1436px" },
         xl: { max: "1200px" },
         lg: { max: "1024px" },
+                mdlg: { max: "960px" },
         md: { max: "768px" },
         sm: { max: "640px" },
         xs: { max: "480px" },

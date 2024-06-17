@@ -96,7 +96,7 @@ export default function DiningSection() {
         </figcaption>
       </figure>
       <motion.div
-        className="mt-[-6.8rem] relative pl-[13rem] xl:pl-[3rem] xl:mt-[3rem] max-w-[44rem] z-[1] xl:max-w-[34rem]"
+        className="mt-[-6.8rem] relative pl-[13rem] xl:pl-[3rem] xl:mt-[3rem] max-w-[44rem] z-[1] xl:max-w-[34rem] mdlg:!mt-[8rem] mdlg:!max-w-full mdlg:!px-[8rem]"
         initial={{ y: 50, opacity: 0 }}
         animate={controls}
         transition={{ duration: 1.5 }}

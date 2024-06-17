@@ -4,13 +4,20 @@ import { detailsData } from "./data";
 
 import Text from "@/typography";
 import LineAnimation from "@/components/ui/animations/line";
+import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 export default function DetailSection() {
   const [currentSlideId, setSlideId] = useState(0);
 
+  const width = useWindowWidth();
+  let customStretch = 0;
+
+  if (width <= 950) {
+    customStretch = 0.8;
+  }
   const content = detailsData[currentSlideId];
   return (
-    <div className="relative flex justify-center items-center px-[4rem] py-[4rem] relative ">
+    <div className="relative flex justify-center items-center px-[4rem] py-[4rem] relative mdlg:flex mdlg:flex-col mdlg:!py-[2rem] mdlg:!px-[2rem]">
       <LineAnimation
         className="!h-[0.5px] absolute top-[-5rem] left-0 "
         direction="horizontal"
@@ -31,7 +38,7 @@ export default function DetailSection() {
         customTo="calc(100% + 5rem)"
       />
 
-      <div className="w-[20%] flex justify-center items-center flex-col relativexl:w-[15%]">
+      <div className="w-[20%] flex justify-center items-center flex-col relative xl:w-[15%] mdlg:!w-full mdlg:!mt-[-3rem] mdlg:!ml-[-10rem]">
         <Text
           tag="h2"
           font="RankingsCaps"
@@ -42,7 +49,7 @@ export default function DetailSection() {
         <Text
           tag="p"
           font="MillerBanner"
-          className="text-[3.9rem] leading-[3.9rem] text-primary pl-[7rem] mr-[-4rem]"
+          className="text-[3.9rem] leading-[3.9rem] text-primary pl-[7rem] mr-[-4rem] mdlg:!pl-[12rem] mdlg:!mt-[-1rem]"
           animation="fade-in-left"
         >
           In Detail
@@ -51,15 +58,25 @@ export default function DetailSection() {
       <DynamicComponentLayout
         currentSlideId={currentSlideId}
         setSlideId={setSlideId}
-        className="max-w-content h-[100%] relative w-[80%] xl:w-[85%] xl:ml-[-5rem]"
+        className="mdlg:mt-[3rem] max-w-content h-[100%] relative w-[80%] xl:w-[85%] xl:ml-[-5rem] mdlg:mb-[10rem]"
         slides={detailsData.map((data) => data.image)}
-        paginationContainerClassName="right-[-4rem] bottom-[-4rem]"
+        paginationContainerClassName="right-[-4rem] bottom-[-4rem] mdlg:!left-[50%] mdlg:!bottom-[-12rem] mdlg:!right-0 mdlg:!transform mdlg:!translate-x-[-50%] mdlg:!min-w-min min-w-min mdlg:flex mdlg:items-center mdlg:justify-center"
+        childContainerClassName="flex-col gap-[2rem]"
+        customStretch={customStretch}
       >
-        <div className="ml-[-8rem]">
+        <div className="mdlg:flex mdlg:flex-col hidden ">
           <Text
             tag="h2"
             font="RankingsCaps"
             className="text-[2.5rem] leading-[2.9rem] text-primary normal max-w-[14rem]"
+            animation="fade-in-bottom"
+          >
+            0{currentSlideId + 1}
+          </Text>
+          <Text
+            tag="h2"
+            font="RankingsCaps"
+            className="mt-[2rem] text-[2.5rem] leading-[2.9rem] text-primary normal max-w-[14rem] mdlg:!max-w-full"
             animation="fade-in-bottom"
           >
             {content.title}
@@ -68,7 +85,7 @@ export default function DetailSection() {
           <Text
             tag="p"
             font="PrioriSans"
-            className="mt-[1.4rem] text-[1.8rem] leading-[2.7rem] text-[#2f2625] normal max-w-[28rem]"
+            className="mt-[1.4rem] text-[1.8rem] leading-[2.7rem] text-[#2f2625] normal max-w-[28rem] mdlg:!max-w-full"
             animation="fade-in-bottom"
           >
             {content.content}

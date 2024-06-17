@@ -186,7 +186,7 @@ export default function Footer() {
           (item, index) => (
             <Button
               type="primary"
-              className="group py-[2rem] px-[8rem] rounded-none text-[#fff] hover:!text-primary"
+              className="group py-[2rem] px-[8rem] rounded-none text-[#fff] hover:!text-primary lg:!px-[2rem]"
               animation="custom"
               animationClassName="left-to-right light rounded-none"
               containerClassName="h-full border border-l-[#fff] flex-1 flex justify-center items-center rounded-none"
