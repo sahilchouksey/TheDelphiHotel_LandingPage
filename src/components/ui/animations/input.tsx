@@ -26,7 +26,7 @@ const AnimatedInput = ({
           x: value || isFocused ? 0 : 0,
           scale: value || isFocused ? 0.8 : 1,
         }}
-        className={` absolute left-[30%] bottom-[4rem] text-4xl transition-all text-[#fff] `}
+        className={` absolute left-[30%] bottom-[4rem] text-4xl transition-all text-[#fff] sm:left-[20%] `}
       >
         {label}
       </motion.label>

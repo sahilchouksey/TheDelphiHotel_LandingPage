@@ -24,7 +24,7 @@ export default function IntroSection() {
       <Image
         alt="Shiny building"
         src="/assets/images/intro.webp"
-        containerClassName=" !w-[50%] mdlg:!w-full mdlg:!py-[2.5rem] mdlg:!px-[3rem]"
+        containerClassName=" !w-[50%] mdlg:!w-full mdlg:!py-[2.5rem] mdlg:px-[3rem] sm:!pt-0 sm:!mt-[-4rem]"
         className="intro-img px-[2.5rem] py-[1rem] relative z-[49]"
         animated="left-to-right"
       />

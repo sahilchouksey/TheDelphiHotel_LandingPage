@@ -78,6 +78,19 @@ body {
     [full-end];
 }
 
+@media only screen and (max-width: 686px) {
+  .container {
+    grid-template-columns:
+      [full-start] minmax(1fr, 1fr)
+      [center-start] repeat(
+        10,
+        [col-start] minmax(min-content, 14.3rem) [col-end]
+      )
+      [center-end] minmax(1fr, 1fr)
+      [full-end];
+  }
+}
+
 .container-full {
   grid-column: full-start / full-end;
 }
@@ -95,6 +108,7 @@ img {
   max-width: 143rem; /* Optional: Maximum width to prevent it from getting too large on very wide screens */
   margin: 0 auto; /* Center the Swiper */
   width: calc(100vw - 2rem);
+  min-width: 100%;
 }
 
 .image-container {
@@ -384,6 +398,10 @@ span.letter2::before {
   bottom: 0.9rem;
 }
 
+.bg-none {
+  background: none;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -406,5 +424,29 @@ span.letter2::before {
   .dining-section-container figcaption::before {
     font-size: 20.6rem;
     top: calc(10% + 8rem);
+  }
+}
+
+@media only screen and (max-width: 686px) {
+  body {
+    font-size: 50%; /* 1rem = 8px */
+  }
+  .dining-section-container figure span {
+    font-size: 9.7rem !important;
+  }
+  .dining-section-container figcaption div {
+    top: 87% !important;
+  }
+  .dining-section-container figcaption::before {
+    font-size: 9.7rem !important;
+    top: 87% !important;
+  }
+  .dining-section-container figure::before {
+    width: 100%;
+    height: calc(100% - -3rem);
+    top: -0.5rem;
+  }
+  .location {
+    min-height: 40rem !important;
   }
 }

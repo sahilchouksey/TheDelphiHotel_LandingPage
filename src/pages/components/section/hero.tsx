@@ -44,7 +44,7 @@ export default function HeroSection() {
         />
       </motion.div>
 
-      <div className="absolute left-1/2 transform -translate-x-1/2 z-[123] bottom-16 w-full text-center text-[#fff] italic flex justify-center items-center flex-col">
+      <div className="absolute left-1/2 transform -translate-x-1/2 z-[123] bottom-16 w-full text-center text-[#fff] italic flex justify-center items-center flex-col md:px-[2rem] md:bottom-[17rem]">
         <Text
           tag="h1"
           font="RankingsCaps"
@@ -57,10 +57,10 @@ export default function HeroSection() {
           <Text
             tag="h1"
             font="MillerBanner"
-            className="text-[8.1rem] leading-[9.3rem] text-center flex justify-center items-center"
+            className="text-[8.1rem] leading-[9.3rem] text-center flex justify-center items-center md:text-[5.4rem] md:leading-[6.4rem]"
             containerClassName=" w-full"
           >
-            <span>Center of</span>
+            <span className="text-wrap">Center of</span>
             <Text
               tag="span"
               font="RankingsCaps"

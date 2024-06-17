@@ -17,7 +17,7 @@ export default function DetailSection() {
   }
   const content = detailsData[currentSlideId];
   return (
-    <div className="relative flex justify-center items-center px-[4rem] py-[4rem] relative mdlg:flex mdlg:flex-col mdlg:!py-[2rem] mdlg:!px-[2rem]">
+    <div className="relative flex justify-center items-center px-[4rem] py-[4rem] relative mdlg:flex mdlg:flex-col mdlg:!py-[2rem] mdlg:!px-[2rem] ">
       <LineAnimation
         className="!h-[0.5px] absolute top-[-5rem] left-0 "
         direction="horizontal"
@@ -58,17 +58,17 @@ export default function DetailSection() {
       <DynamicComponentLayout
         currentSlideId={currentSlideId}
         setSlideId={setSlideId}
-        className="mdlg:mt-[3rem] max-w-content h-[100%] relative w-[80%] xl:w-[85%] xl:ml-[-5rem] mdlg:mb-[10rem]"
+        className="mdlg:mt-[3rem] max-w-content h-[100%] w-[80%] xl:w-[85%] xl:ml-[-5rem] mdlg:mb-[10rem] sm:pl-[2rem]"
         slides={detailsData.map((data) => data.image)}
-        paginationContainerClassName="right-[-4rem] bottom-[-4rem] mdlg:!left-[50%] mdlg:!bottom-[-12rem] mdlg:!right-0 mdlg:!transform mdlg:!translate-x-[-50%] mdlg:!min-w-min min-w-min mdlg:flex mdlg:items-center mdlg:justify-center"
-        childContainerClassName="flex-col gap-[2rem]"
+        paginationContainerClassName="mdlg:!left-[50%] mdlg:!right-0 mdlg:!transform mdlg:!translate-x-[-50%] mdlg:!min-w-min min-w-min mdlg:flex mdlg:items-center mdlg:justify-center sm:!bottom-0"
+        childContainerClassName="flex mdlg:flex-col"
         customStretch={customStretch}
       >
-        <div className="mdlg:flex mdlg:flex-col hidden ">
+        <div className="mdlg:flex mdlg:flex-col flex-col">
           <Text
             tag="h2"
             font="RankingsCaps"
-            className="text-[2.5rem] leading-[2.9rem] text-primary normal max-w-[14rem]"
+            className="text-[2.5rem] leading-[2.9rem] text-primary normal max-w-[14rem] hidden mdlg:!flex"
             animation="fade-in-bottom"
           >
             0{currentSlideId + 1}

@@ -19,10 +19,11 @@ export default {
         "2xl": { max: "1436px" },
         xl: { max: "1200px" },
         lg: { max: "1024px" },
-                mdlg: { max: "960px" },
-        md: { max: "768px" },
-        sm: { max: "640px" },
+        mdlg: { max: "960px" },
+        md: { max: "786px" },
+        sm: { max: "686px" },
         xs: { max: "480px" },
+        xxs: { max: "380px" },
       },
 
       colors: {

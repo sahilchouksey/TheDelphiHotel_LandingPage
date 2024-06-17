@@ -64,7 +64,7 @@ const DynamicComponentLayout = ({
   return (
     <div
       className={`w-full h-full border-1 border-[#707070] ${className} ${
-        !customSlides && "relative"
+        !customSlides && ""
       }`}
     >
       <div
@@ -78,7 +78,7 @@ const DynamicComponentLayout = ({
               ? ""
               : "w-[60%] detail-section-center relative mdlg:w-full !max-w-[56rem]"
           }`}
-          modules={[EffectFade]}
+          modules={[EffectFade, Autoplay]}
           style={{
             maxWidth: `calc(var(--max-stretch) * ${maxWidth})`,
           }}

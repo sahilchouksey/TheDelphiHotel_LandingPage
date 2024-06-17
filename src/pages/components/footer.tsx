@@ -36,7 +36,7 @@ const SignUpForm = () => {
       </Text>
       <form className="w-full mt-[3rem]">
         <motion.div
-          className="flex justify-between items-center "
+          className="flex justify-between items-center sm:flex-col"
           initial={{ y: 50, opacity: 0 }}
           animate={controls}
           transition={{ duration: 1.5 }}
@@ -44,27 +44,27 @@ const SignUpForm = () => {
           <AnimatedInput
             id="firstName"
             label="First Name"
-            className="w-full mr-[4rem]"
+            className="w-full mr-[4rem] sm:mr-0 sm:mb-[2rem]"
           />
           <AnimatedInput
             id="lastName"
             label="Last Name"
-            className="w-full mr-[4rem]"
+            className="w-full mr-[4rem] sm:mr-0 sm:mb-[2rem]"
           />
           <AnimatedInput
             id="email"
             label="Email Address"
             type="email"
-            className="w-full mr-0"
+            className="w-full mr-0 sm:mb-[2rem]"
           />
         </motion.div>
         <motion.div
-          className="flex flex-row justify-between items-center mt-[4rem]"
+          className="hidden flex flex-row justify-between items-center mt-[4rem] sm:flex-col"
           initial={{ y: 50, opacity: 0 }}
           animate={controls}
           transition={{ duration: 1.5 }}
         >
-          <div className="flex flex-row space-x-6 gap-12">
+          <div className="flex flex-row space-x-6 gap-12 sm:flex-col">
             <div className="flex flex-row justify-start items-center">
               <input
                 type="checkbox"
@@ -106,7 +106,7 @@ const SignUpForm = () => {
 
           <Button
             type="secondary"
-            className="ml-auto mr-[12rem] xl:mr-0 flex justify-center items-center text-[#fff] before:filter before:invert after:filter after:invert"
+            className="ml-auto mr-[12rem] xl:mr-0 flex justify-center items-center text-[#fff] before:filter before:invert after:filter after:invert sm:mr-0"
             animation="custom"
           >
             <Text
@@ -141,7 +141,7 @@ export default function Footer() {
   return (
     <Section
       backgroundColor="var(--color-primary)"
-      childContainerClassName="relative clear pt-[8.5rem] flex justify-start items-center flex-col min-h-[30rem]"
+      childContainerClassName="relative clear pt-[8.5rem] flex justify-start items-center flex-col min-h-[30rem] mb-[20rem]"
     >
       <Image
         src="/assets/icons/logo-white.svg"
@@ -180,7 +180,7 @@ export default function Footer() {
         initial={{ y: 50, opacity: 0 }}
         animate={controls}
         transition={{ duration: 1.5 }}
-        className="mt-[5rem] call-to-actions w-full flex justify-between items-center border border-[#fff]"
+        className="mt-[5rem] call-to-actions w-full flex justify-between items-center border border-[#fff] sm:flex-col"
       >
         {["FAQ", "Media Inquiries", "Contact Us", "Careers"].map(
           (item, index) => (
@@ -189,7 +189,7 @@ export default function Footer() {
               className="group py-[2rem] px-[8rem] rounded-none text-[#fff] hover:!text-primary lg:!px-[2rem]"
               animation="custom"
               animationClassName="left-to-right light rounded-none"
-              containerClassName="h-full border border-l-[#fff] flex-1 flex justify-center items-center rounded-none"
+              containerClassName="h-full border border-l-[#fff] flex-1 flex justify-center items-center rounded-none sm:flex-1 sm:w-full"
               key={index}
             >
               <Text

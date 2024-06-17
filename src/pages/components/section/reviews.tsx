@@ -21,7 +21,7 @@ export default function ReviewsSection() {
       <Text
         tag="p"
         font="MillerBanner"
-        className="text-[2.4rem] leading-[3.6rem] text-primary italic text-center !text-[#2f2625]"
+        className="text-[2.4rem] leading-[3.6rem] text-primary italic text-center !text-[#2f2625] opacity-60"
         animation="fade-in-bottom"
       >
         {review.content}
@@ -68,6 +68,8 @@ export default function ReviewsSection() {
         slides={reviews}
         customSlides={reviews}
         currentSlide={currentSlide}
+        paginationContainerClassName="mdlg:!left-[50%] mdlg:!right-0 mdlg:!transform mdlg:!translate-x-[-50%] mdlg:!min-w-min min-w-min mdlg:flex mdlg:items-center mdlg:justify-center"
+        customStretch={1}
       ></DynamicComponentLayout>
     </div>
   );

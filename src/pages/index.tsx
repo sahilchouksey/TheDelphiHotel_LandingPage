@@ -20,10 +20,10 @@ export default function IndexPage() {
       <Section>
         <HeroSection />
       </Section>
-      <Section className="mt-[1rem]">
+      <Section className="mt-[1rem] sm:hidden">
         <AvailablilitySection />
       </Section>
-      <Section className="mt-[1rem]">
+      <Section className="mt-[1rem] sm:mt-[4rem]">
         <IntroSection />
       </Section>
       <Section className="mt-[1rem] mb-[5rem]">
@@ -34,8 +34,8 @@ export default function IndexPage() {
       </Section>
       <Section
         backgroundColor="var(--color-background)"
-        className="relative"
-        childContainerClassName="before:content-[''] before:w-[100%] before:min-h-[27rem] before:block before:absolute before:left-0 before:top-0 before:bg-primary before:z-[-1]"
+        className="relative sm:!mt-[10rem]"
+        childContainerClassName="before:content-[''] before:w-[100%] before:min-h-[27rem] sm:before:!min-h-[37rem] sm:before:!mt-[-10rem] before:block before:absolute before:left-0 before:top-0 before:bg-primary before:z-[-1]"
       >
         <DiningSection />
       </Section>
@@ -46,10 +46,10 @@ export default function IndexPage() {
         <ReviewsSection />
       </Section>
       <Section
-        className="bg-no-repeat bg-center bg-contain max-w-full max-w-[192rem] mx-auto !mt-[-45rem] xl:!mt-[-65rem] -mb-[60rem] min-h-[178rem] flex justify-center items-center"
+        className="bg-no-repeat bg-center bg-contain max-w-full max-w-[192rem] mx-auto mt-[-45rem] xl:mt-[-65rem] sm:!mt-[0] -mb-[60rem] min-h-[178rem] flex justify-center items-center sm:!bg-none sm:!mt-[0] sm:!min-h-[126rem]"
         style={{ backgroundPosition: "calc(100% - 15rem) center" }}
         backgroundImage="https://symphony.cdn.tambourine.com/the-delphi-downtown-la-full/media/delphi-homepage-map-64be9613eb4a4.jpg"
-        childContainerClassName="location flex justify-end items-center"
+        childContainerClassName="location flex justify-end items-center sm:flex-col relative sm:!h-full"
       >
         <LocationSection />
       </Section>
