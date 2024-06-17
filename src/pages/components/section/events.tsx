@@ -1,11 +1,30 @@
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 import Button from "@/components/ui/button";
 import Image from "@/components/ui/image";
 import Text from "@/typography";
 
 export default function EventsSection() {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.5 });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({
+        y: ["-100%", "0%", "0%"],
+        x: ["0%", "0%", "100%"],
+        transition: {
+          times: [0, 0.3, 1],
+          duration: 4,
+          ease: "easeInOut",
+        },
+      });
+    }
+  }, [isInView, controls]);
   return (
-    <div className="event-section-container">
-      <figure className="relative w-custom-event-min">
+    <div ref={ref} className="event-section-container">
+      <figure className="relative w-custom-event-min overflow-hidden">
         <Image
           alt="a woman talking on a cell phone"
           src="https://symphony.cdn.tambourine.com/the-delphi-downtown-la-full/media/delphi-homepage-events-64be95d53df4d.jpg"
@@ -13,8 +32,19 @@ export default function EventsSection() {
           className="object-cover w-full"
           containerClassName="w-full"
         ></Image>{" "}
+        <motion.div
+          className="absolute top-0 left-0 w-full h-full bg-primary z-50 flex items-center justify-center z-[98]"
+          animate={controls}
+          initial={{ y: "-100%" }}
+        >
+          <Image
+            src={"/assets/icons/logo-white.svg"}
+            alt="Logo"
+            className="max-w-[15.5rem] absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2"
+          />
+        </motion.div>
       </figure>
-      <div className="w-custom-event-min-2 pr-[2rem] pl-[9%]">
+      <div className="w-custom-event-min-2 h-full pr-[2rem] pl-[9%] z-[99] bg-[#254844]">
         <Text
           tag="p"
           font="RankingsCaps"
@@ -27,6 +57,7 @@ export default function EventsSection() {
           tag="h2"
           font="RankingsCaps"
           className="mb-[2rem] text-[2.5rem] leading-[2.9rem] text-[#FBF8F2] normal"
+          animation="fade-in-bottom"
         >
           Organized Occasions
         </Text>
@@ -35,6 +66,7 @@ export default function EventsSection() {
           tag="p"
           font="PrioriSans"
           className="text-[1.8rem] leading-[2.7rem] text-[#FBF8F2] normal"
+          animation="fade-in-bottom"
         >
           Bring together a few friends and make a few more while you’re with us.
           From casual to corporate, we’ve got all the space and amenities you
@@ -49,6 +81,7 @@ export default function EventsSection() {
             tag="span"
             font="MillerBanner"
             className="text-[1.6rem] leading-[1.8rem] text-[#FBF8F2] italic"
+            animation="fade-in-bottom"
           >
             Gather together
           </Text>

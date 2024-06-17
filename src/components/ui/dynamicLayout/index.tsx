@@ -61,7 +61,9 @@ const DynamicComponentLayout = ({
             customSlides ? "" : "w-[60%] detail-section-center relative"
           }`}
           modules={[EffectFade, Autoplay]}
-          style={{ maxWidth: `calc(var(--max-stretch) * ${customSlides ? 0.6 : 0.4})` }}
+          style={{
+            maxWidth: `calc(var(--max-stretch) * ${customSlides ? 0.6 : 0.4})`,
+          }}
           autoplay={{
             delay: 3000,
             disableOnInteraction: false,
@@ -78,6 +80,7 @@ const DynamicComponentLayout = ({
                   src={typeof slide === "string" ? slide : ""}
                   alt={`slide-${index}`}
                   className="circular relative z-[-5]"
+                  animated="circle"
                 />
               )}
             </SwiperSlide>
@@ -106,6 +109,7 @@ const DynamicComponentLayout = ({
           <Image
             src={ArrowLeft}
             alt="Arrow Left"
+            className="w-[2.5rem] h-[1.8rem]"
             containerClassName="flex justify-center items-center w-[2.5rem] h-[1.8rem] group-hover:filter-custom group-hover:translate-x-[-0.5rem] transition-all duration-200 ease-in-out"
           />
         </Button>
@@ -120,6 +124,7 @@ const DynamicComponentLayout = ({
           <Image
             src={ArrowRight}
             alt="Arrow Right"
+            className="w-[2.5rem] h-[1.8rem]"
             containerClassName="flex justify-center items-center w-[2.5rem] h-[1.8rem] group-hover:filter-custom group-hover:translate-x-[0.5rem] transition-all duration-200 ease-in-out"
           />
         </Button>

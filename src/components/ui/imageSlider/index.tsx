@@ -29,7 +29,7 @@ export default function SwiperImageSlider({ slides }: SwiperImageSliderProps) {
       }}
       modules={[EffectCreative, Autoplay]}
       autoplay={{
-        delay: 3000,
+        delay: 6000,
         disableOnInteraction: false,
       }}
       className="mySwiper custom-swiper"

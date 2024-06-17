@@ -6,7 +6,7 @@ interface SectionWrapperProps {
   padding?: string;
   margin?: string;
   className?: string;
-    style?: React.CSSProperties;
+  style?: React.CSSProperties;
   childContainerClassName?: string;
 }
 export default function Section({
@@ -15,7 +15,7 @@ export default function Section({
   backgroundImage,
   padding,
   margin,
-    style,
+  style,
   className,
   childContainerClassName,
   ...props

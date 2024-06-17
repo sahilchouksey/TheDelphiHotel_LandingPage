@@ -33,7 +33,10 @@ export default function Navbar() {
 
             <ul className="w-full navbar-nav flex flex-row text-primary list-none justify-between">
               {Object.entries(NavItems).map(([key]) => (
-                <li key={key} className="min-w-min text-center">
+                <li
+                  key={key}
+                  className="cursor-pointer relative before:absolute before:left-[51%] before:right-[51%] before:bottom-0 before:h-[1px] before:bg-[#1D1D1D] before:transition-all before:duration-300 before:ease-in-out before:hover:left-0 before:hover:right-0"
+                >
                   <Text
                     tag="span"
                     font="PrioriSans"

@@ -1,9 +1,18 @@
+import LineAnimation from "@/components/ui/animations/line";
 import Button from "@/components/ui/button";
 import Text from "@/typography";
 
 export default function AvailablilitySection() {
   return (
-    <div className="w-full h-full border border-border_light flex flex-row justify-between items-center">
+    <div className="relative w-full h-full  flex flex-row justify-between items-center">
+      <LineAnimation
+        className="!h-[0.5px] absolute top-0 left-0"
+        direction="horizontal"
+      />
+      <LineAnimation
+        className="!w-[0.5px] absolute top-0 left-0"
+        direction="vertical"
+      />
       <Button
         type="primary"
         className="text-primary px-[5rem] py-[2.2rem] flex justify-center items-center"

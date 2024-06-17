@@ -1,16 +1,33 @@
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 import Button from "@/components/ui/button";
 import Image from "@/components/ui/image";
 import Text from "@/typography";
 
 export default function DiningSection() {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1.5 },
+      });
+    }
+  }, [controls, isInView]);
+
   return (
-    <div className="dining-section-container relative pb-[7rem]">
+    <div className="dining-section-container relative pb-[7rem]" ref={ref}>
       <figure className="text-center relative z-[1] m-0">
         <Image
           src="https://symphony.cdn.tambourine.com/the-delphi-downtown-la-full/media/thedelphidowntownla-homepage-dining-image-03-650e00b0beeed.png"
           alt="a plate with a slice of pizza on it"
           className="max-w-[56rem] bg-cover object-cover align-middle z-[-1]"
           containerClassName="flex justify-center items-center z-[-1]"
+          animated="circle"
         />
         <figcaption className="block" data-one="dining">
           <div
@@ -26,7 +43,12 @@ export default function DiningSection() {
           </div>
         </figcaption>
       </figure>
-      <div className="mt-[-6.8rem] relative pl-[13rem] max-w-[44rem] z-[1]">
+      <motion.div
+        className="mt-[-6.8rem] relative pl-[13rem] max-w-[44rem] z-[1]"
+        initial={{ y: 50, opacity: 0 }}
+        animate={controls}
+        transition={{ duration: 1.5 }}
+      >
         <Text
           tag="h2"
           className="text-[2.5rem] leading-[2.9rem] normal"
@@ -55,7 +77,7 @@ export default function DiningSection() {
             Let's eat
           </Text>
         </Button>
-      </div>
+      </motion.div>
     </div>
   );
 }

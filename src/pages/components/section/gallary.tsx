@@ -83,6 +83,7 @@ export default function GallarySection() {
             tag="h2"
             font="RankingsCaps"
             className="italic text-[8.5rem] leading-[9.8rem] text-primary"
+            animation="fade-in-bottom"
           >
             SCENES
           </Text>
@@ -90,6 +91,7 @@ export default function GallarySection() {
             tag="p"
             className="text-[5rem] leading-[5.8rem] text-primary italic !text-[#2f2625]"
             font="MillerBanner"
+            animation="fade-in-bottom"
           >
             From
           </Text>
@@ -97,6 +99,7 @@ export default function GallarySection() {
             tag="p"
             font="MillerBanner"
             className="text-[9rem] leading-[10.4rem] text-primary italic !text-[#2f2625]"
+            animation="fade-in-bottom"
           >
             The City
           </Text>

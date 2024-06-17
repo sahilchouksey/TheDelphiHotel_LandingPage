@@ -1,10 +1,34 @@
 import Button from "@/components/ui/button";
 import Text from "@/typography";
+import { motion, useAnimation, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 export default function RoomsSection() {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1.5 },
+      });
+    }
+  }, [controls, isInView]);
+
   return (
-    <div className="!my-[5rem] bg-[url(/assets/images/room.jpg)] bg-cover relative h-[70rem]">
-      <div className="flex justify-start items-center bg-[#fff] absolute bottom-[3rem] right-[3rem] z-[12] max-w-[83rem]">
+    <div
+      className="!my-[5rem] bg-[url(/assets/images/room.jpg)] bg-cover relative h-[70rem]"
+      ref={ref}
+    >
+      <motion.div
+        className="flex justify-start items-center bg-[#fff] absolute bottom-[3rem] right-[3rem] z-[12] max-w-[83rem]"
+        initial={{ y: 50, opacity: 0 }}
+        animate={controls}
+        transition={{ duration: 1.5 }}
+      >
         <div className="my-0 mx-auto w-custom-room-min">
           <Text
             tag="p"
@@ -45,7 +69,7 @@ export default function RoomsSection() {
             </Text>
           </Button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

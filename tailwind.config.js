@@ -39,6 +39,9 @@ export default {
       maxWidth: {
         "stretch-60": "calc(var(--max-stretch) * 60%)",
       },
+      height: {
+        custom: "calc(100% + 5rem)",
+      },
     },
   },
   plugins: [

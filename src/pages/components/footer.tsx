@@ -3,19 +3,44 @@ import Section from "./section";
 import Text from "@/typography";
 import Button from "@/components/ui/button";
 import AnimatedInput from "@/components/ui/animations/input";
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const SignUpForm = () => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1.5 },
+      });
+    }
+  }, [controls, isInView]);
+
   return (
-    <div className="text-white w-full mt-[4rem] relative overflow-hidden">
+    <div
+      ref={ref}
+      className="text-white w-full mt-[4rem] relative overflow-hidden"
+    >
       <Text
         tag="h2"
         font="MillerBanner"
         className="text-[3.3rem] leading-[3.8rem] text-[#fff] text-center"
+        animation="fade-in-bottom"
       >
         Stay in The Know
       </Text>
       <form className="w-full mt-[3rem]">
-        <div className="flex justify-between items-center ">
+        <motion.div
+          className="flex justify-between items-center "
+          initial={{ y: 50, opacity: 0 }}
+          animate={controls}
+          transition={{ duration: 1.5 }}
+        >
           <AnimatedInput
             id="firstName"
             label="First Name"
@@ -32,8 +57,13 @@ const SignUpForm = () => {
             type="email"
             className="w-full mr-0"
           />
-        </div>
-        <div className="flex flex-row justify-between items-center mt-[4rem]">
+        </motion.div>
+        <motion.div
+          className="flex flex-row justify-between items-center mt-[4rem]"
+          initial={{ y: 50, opacity: 0 }}
+          animate={controls}
+          transition={{ duration: 1.5 }}
+        >
           <div className="flex flex-row space-x-6 gap-12">
             <div className="flex flex-row justify-start items-center">
               <input
@@ -87,13 +117,27 @@ const SignUpForm = () => {
               Sign Up
             </Text>
           </Button>
-        </div>
+        </motion.div>
       </form>
     </div>
   );
 };
 
 export default function Footer() {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start({
+        y: 0,
+        opacity: 1,
+        transition: { duration: 1.5 },
+      });
+    }
+  }, [controls, isInView]);
+
   return (
     <Section
       backgroundColor="var(--color-primary)"
@@ -103,12 +147,14 @@ export default function Footer() {
         src="/assets/icons/logo-white.svg"
         alt="White logo"
         containerClassName="flex justify-center items-start min-h-min max-w-[211px] max-h-[74px]"
+        animated="left-to-right"
       />
       <div className="mt-[5rem] flex flex-col justify-center items-center text-[#fff]">
         <Text
           tag="p"
           font="PrioriSans"
           className="flex justify-center items-center text-[2rem] leading-[2.3rem] hover:underline duration-300 ease-in-out"
+          animation="fade-in-bottom"
         >
           <span>550 S Flower St</span>
         </Text>
@@ -116,6 +162,7 @@ export default function Footer() {
           tag="p"
           font="PrioriSans"
           className="flex justify-center items-center text-[2rem] leading-[2.3rem] hover:underline duration-300 ease-in-out"
+          animation="fade-in-bottom"
         >
           Los Angeles,CA 90071{" "}
         </Text>
@@ -123,11 +170,18 @@ export default function Footer() {
           tag="p"
           font="PrioriSans"
           className="mt-[2rem] flex justify-center items-center text-[2rem] leading-[2.3rem] hover:underline duration-300 ease-in-out"
+          animation="fade-in-bottom"
         >
           213-892-8080
         </Text>
       </div>
-      <div className="mt-[5rem] call-to-actions w-full flex justify-between items-center border border-[#fff]">
+      <motion.div
+        ref={ref}
+        initial={{ y: 50, opacity: 0 }}
+        animate={controls}
+        transition={{ duration: 1.5 }}
+        className="mt-[5rem] call-to-actions w-full flex justify-between items-center border border-[#fff]"
+      >
         {["FAQ", "Media Inquiries", "Contact Us", "Careers"].map(
           (item, index) => (
             <Button
@@ -148,7 +202,7 @@ export default function Footer() {
             </Button>
           ),
         )}
-      </div>
+      </motion.div>
 
       <SignUpForm />
 
