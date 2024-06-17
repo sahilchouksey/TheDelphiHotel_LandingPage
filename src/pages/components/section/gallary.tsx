@@ -7,6 +7,7 @@ import Text from "@/typography";
 export default function GallarySection() {
   const width = useWindowWidth();
   const isMobile = width <= 768;
+  console.log("isMobile", isMobile);
   return (
     <div className="mb-[8rem] relative">
       <div className="gallery-section md:hidden">
