@@ -48,27 +48,32 @@ export default function HeroSection() {
         <Text
           tag="h1"
           font="RankingsCaps"
-          className="text-[2.9rem] leading-[3.3rem] text-center absolute top-50 transform -translate-y-1/2 left-0 right-0 mt-[0] ml-[-44rem]"
+          containerClassName="w-full h-full"
+          className="text-[2.9rem] leading-[3.3rem] text-center absolute top-50 transform -translate-y-1/2 left-0 right-0 mt-[0] ml-[-44rem] flex justify-center items-center sm:!mx-auto"
         >
-          The new
+          <span>The new</span>
         </Text>
 
-        <div className="hero-heading  w-full">
+        <div className="hero-heading  w-full sm:!mt-[2rem]">
           <Text
             tag="h1"
             font="MillerBanner"
-            className="text-[8.1rem] leading-[9.3rem] text-center flex justify-center items-center md:text-[5.4rem] md:leading-[6.4rem]"
-            containerClassName=" w-full"
+            className="text-[8.1rem] leading-[9.3rem] text-center md:text-[5.4rem] md:leading-[6.4rem] flex flex-wrap sm:flex-nowrap sm:block justify-center items-center"
+            containerClassName="w-full"
           >
-            <span className="text-wrap">Center of</span>
+            <span className="whitespace-nowrap sm:whitespace-normal">
+              Center of
+            </span>
             <Text
               tag="span"
               font="RankingsCaps"
-              className="mx-[2rem] ml-[4rem]"
+              className="mx-[2rem] ml-[4rem] whitespace-nowrap sm:whitespace-normal"
             >
               L.A.
             </Text>
-            <span>Culture</span>
+            <span className="whitespace-nowrap sm:whitespace-normal">
+              Culture
+            </span>
           </Text>
         </div>
       </div>

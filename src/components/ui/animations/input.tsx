@@ -5,6 +5,7 @@ interface AnimatedInputProps {
   label: string;
   type?: string;
   className?: string;
+  inputClassName?: string;
 }
 
 const AnimatedInput = ({
@@ -12,6 +13,7 @@ const AnimatedInput = ({
   label,
   type = "text",
   className,
+  inputClassName,
 }: AnimatedInputProps) => {
   const [isFocused, setIsFocused] = useState(false);
   const [value, setValue] = useState("");
@@ -38,7 +40,7 @@ const AnimatedInput = ({
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(value.length > 0)}
         onChange={(e) => setValue(e.target.value)}
-        className="w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-white text-4xl px-2 py-1 h-[10rem] family-sans max-w-[40rem]"
+        className={`w-full bg-transparent border-b border-gray-500 focus:outline-none focus:border-white text-4xl px-2 py-1 h-[10rem] family-sans max-w-[40rem] ${inputClassName}`}
       />
     </div>
   );

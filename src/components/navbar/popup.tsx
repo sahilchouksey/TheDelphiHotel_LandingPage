@@ -23,7 +23,7 @@ export default function NavbarPopup({
           className="fixed inset-0 bg-white z-[999] flex flex-col items-center justify-center transform"
         >
           <button
-            className="absolute top-[5rem] right-[5rem] text-primary"
+            className="absolute top-[5rem] right-[5rem] text-primary sm:!top-[1rem] sm:!right-[1rem]"
             onClick={handleMenuToggle} // Close button for the overlay
           >
             <svg

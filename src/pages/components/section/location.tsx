@@ -11,7 +11,7 @@ export default function LocationSection() {
         className="object-cover w-full h-full"
         containerClassName="sm:w-full sm:h-[30rem] sm:flex hidden"
       />
-      <div className="flex flex-col justify-center items-start ml-auto w-[52rem]">
+      <div className="flex flex-col justify-center items-start ml-auto w-[52rem] sm:!w-full sm:!p-[2rem]">
         <Text
           tag="p"
           font="MillerBanner"

@@ -42,7 +42,7 @@ export default function DetailSection() {
         <Text
           tag="h2"
           font="RankingsCaps"
-          className="text-[5rem] leading-[5rem] text-primary"
+          className="text-[5rem] leading-[5rem] text-primary sm:text-[4rem]"
         >
           The Delphi
         </Text>

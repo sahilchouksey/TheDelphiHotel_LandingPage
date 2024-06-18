@@ -435,11 +435,11 @@ span.letter2::before {
     font-size: 9.7rem !important;
   }
   .dining-section-container figcaption div {
-    top: 87% !important;
+    top: 80% !important;
   }
   .dining-section-container figcaption::before {
     font-size: 9.7rem !important;
-    top: 87% !important;
+    top: 80% !important;
   }
   .dining-section-container figure::before {
     width: 100%;

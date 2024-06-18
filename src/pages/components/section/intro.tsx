@@ -33,7 +33,7 @@ export default function IntroSection() {
         <Text
           tag="h1"
           font="RankingsCaps"
-          className="text-[10.4rem] leading-[8.3rem] text-primary uppercase mdlg:!text-[8.4rem]"
+          className="text-[10.4rem] leading-[8.3rem] text-primary uppercase xxs:!text-[5rem] mdlg:text-[8.4rem] sm:!text-[6.6rem] mdlg:leading-[9.3rem] sm:!leading-[7.4rem]"
         >
           THE DELPHI LOS ANGELES
         </Text>

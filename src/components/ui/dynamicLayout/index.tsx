@@ -76,7 +76,7 @@ const DynamicComponentLayout = ({
           className={`${
             customSlides
               ? ""
-              : "w-[60%] detail-section-center relative mdlg:w-full !max-w-[56rem]"
+              : "w-[60%] detail-section-center relative mdlg:w-full max-w-[56rem] sm:!max-w-[32rem] xxs:!max-w-[28rem]"
           }`}
           modules={[EffectFade, Autoplay]}
           style={{
