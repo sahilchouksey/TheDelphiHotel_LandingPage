@@ -35,7 +35,7 @@ export default function DiningSection() {
         <Image
           src="https://symphony.cdn.tambourine.com/the-delphi-downtown-la-full/media/thedelphidowntownla-homepage-dining-image-03-650e00b0beeed.png"
           alt="a plate with a slice of pizza on it"
-          className="sm:max-w-[32rem] xxs:!max-w-[28rem]  bg-cover object-cover align-middle z-[-1] sm:!ax-w-[100%] sm:!px-[1.5rem]"
+          className="sm:max-w-[32rem] xxs:!max-w-[28rem] max-w-[56rem] bg-cover object-cover align-middle z-[-1] sm:!max-w-[100%] sm:!px-[1.5rem]"
           containerClassName="flex justify-center items-center z-[-1]"
           animated="circle"
         />

@@ -45,24 +45,24 @@ const SignUpForm = () => {
             id="firstName"
             label="First Name"
             className="w-full mr-[4rem] sm:mr-0 sm:mb-[2rem]"
-            inputClassName="sm:w-full sm:ml-[2.5rem] xss:!ml-0"
+            inputClassName="sm:w-full sm:ml-[2.5rem]"
           />
           <AnimatedInput
             id="lastName"
             label="Last Name"
             className="w-full mr-[4rem] sm:mr-0 sm:mb-[2rem]"
-            inputClassName="sm:w-full sm:ml-[2.5rem] xss:!ml-0"
+            inputClassName="sm:w-full sm:ml-[2.5rem]"
           />
           <AnimatedInput
             id="email"
             label="Email Address"
             type="email"
             className="w-full mr-0 sm:mb-[2rem]"
-            inputClassName="sm:w-full sm:ml-[2.5rem] xss:!ml-0"
+            inputClassName="sm:w-full sm:ml-[2.5rem]"
           />
         </motion.div>
         <motion.div
-          className="flex flex-row justify-between items-center mt-[4rem] sm:flex-col sm:ml-[2rem]"
+          className="flex flex-row justify-between items-center mt-[4rem] sm:flex-col sm:items-start sm:ml-[2rem]"
           initial={{ y: 50, opacity: 0 }}
           animate={controls}
           transition={{ duration: 1.5 }}
@@ -109,7 +109,7 @@ const SignUpForm = () => {
 
           <Button
             type="secondary"
-            className="ml-auto mr-[12rem] xl:mr-0 flex justify-center items-center text-[#fff] before:filter before:invert after:filter after:invert sm:!mx-auto sm:!mt-[4rem]"
+            className="ml-auto mr-[12rem] xl:mr-0 flex justify-center items-center text-[#fff] before:filter before:invert after:filter after:invert sm:!mx-auto sm:!mt-[6rem] sm:justify-start"
             animation="custom"
           >
             <Text
@@ -209,8 +209,8 @@ export default function Footer() {
 
       <SignUpForm />
 
-      <div className="divider w-full bg-[#fff] h-[1px] w-[100vw] absolute bottom-[7rem] sm:bottom-[18rem] sm:hidden"></div>
-      <div className="relative w-full flex justify-between items-center mt-[15rem] mb-[2rem] sm:flex-col sm:space-y-12 mb-[10rem] sm:hidden">
+      <div className="divider w-full bg-[#fff] h-[1px] w-[100vw] absolute sm:bottom-[18rem] sm:hidden bottom-[8rem]"></div>
+      <div className="sm:hidden absolute bottom-[3rem] w-full flex justify-between items-center mt-[5rem]">
         <div className="flex justify-start items-center ">
           {[
             "Privacy Policy",
@@ -229,15 +229,11 @@ export default function Footer() {
             </Text>
           ))}
         </div>
-        <div
-          className="justify-center flex justify-center items-center absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]
-                    sm:flex-col sm:space-y-12
-                    "
-        >
+        <div className="justify-center flex justify-center items-center absolute top-[50%] left-[50%] transform translate-x-[-50%] translate-y-[-50%]">
           <Text
             tag="p"
             font="PrioriSans"
-            className="text-[1.5rem] leading-[2.3rem] text-[#fff] "
+            className="text-[1.5rem] leading-[2.3rem] text-[#fff] lg:hidden "
           >
             The Delphi Downtown LA. 2024. All rights reserved.{" "}
           </Text>
